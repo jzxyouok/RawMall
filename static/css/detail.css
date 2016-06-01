@@ -1,0 +1,232 @@
+body {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	font-family: SimHei;
+	background-color: #f3f3f3;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+/**wrapper**/
+#pageMarketDetail_wrapper {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	bottom: 51px;
+	overflow: auto;
+}
+
+#pageMarketDetail_wrapper>#scroller {
+	position: absolute;
+	left: 0px;
+	width: 100%;
+}
+
+/**fm**/
+#pageMarketDetail_wrapper>#scroller .fm {
+	width: 100%;
+	height: 150px;
+}
+
+/**title**/
+#pageMarketDetail_wrapper>#scroller .title {
+	background-color: #fff;
+}
+
+#pageMarketDetail_wrapper>#scroller .title>.name {
+	padding: 10px;
+	color: #272727;
+	line-height: 19px;
+	font-size: 16px;
+}
+
+#pageMarketDetail_wrapper>#scroller .title>.price {
+	color: #ff9900;
+	font-weight: bold;
+	padding: 0px 10px 15px 10px;
+	border-bottom: 1px solid #dedede;
+	font-size: 21px;
+}
+
+#pageMarketDetail_wrapper>#scroller .title>.info {
+	border-bottom: 1px solid #dedede;
+	padding: 10px;
+	font-size: 13px;
+}
+
+#pageMarketDetail_wrapper>#scroller .title>.info>.iconfont {
+	font-size: 16px;
+	color: #444;
+	color: #E45366;
+}
+
+#pageMarketDetail_wrapper>#scroller .title>.info>.url{
+    text-decoration: underline;
+    color: #3091F1;
+}
+
+/**detail**/
+#pageMarketDetail_wrapper>#scroller .detail {
+	width: 95%;
+	margin: 10px auto 20px auto;
+	background-color: #fff;
+	border-radius: 1px;
+	border: 1px solid #dedede;
+}
+
+#pageMarketDetail_wrapper>#scroller .detail>.title>.iconfont {
+	font-size: 33px;
+	text-align: center;
+	padding: 5px;
+	color: #444;
+}
+
+#pageMarketDetail_wrapper>#scroller .detail>.title>.text {
+	text-align: center;
+	font-size: 14px;
+	color: #555;
+	border-bottom: 1px solid #dedede;
+	padding-bottom: 6px;
+	margin-bottom: 5px;
+}
+
+#pageMarketDetail_wrapper>#scroller .detail>.list {
+    padding: 16px 10px 18px 10px;
+    color: #24566F;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: Microsoft YaHei;
+}
+
+#pageMarketDetail_wrapper>#scroller .detail>.list>.iconfont {
+    font-size: 20px;
+    float: left;
+    width: 28px;
+    color: #24566F;
+}
+
+#pageMarketDetail_wrapper>#scroller .detail>.list>div.group {
+	margin-left: 25px;	
+}
+
+#pageMarketDetail_wrapper>#scroller .detail>.list>div.group>pre{
+	word-break: break-all;
+    word-wrap: break-word;
+    font-family: SimHei;
+    padding-top: 15px;
+    line-height: 22px;
+    color: #555;
+   font-weight: normal;
+   white-space: pre-wrap;
+}
+
+/**call**/
+#pageMarketDetail_wrapper>#scroller .call {
+	padding: 15px 15px 20px 15px;
+}
+
+#pageMarketDetail_wrapper>#scroller .call>span {
+	color: #3091F1;
+	font-size: 15px;
+	padding: 3px 10px;
+	border: 1px solid #3091F1;
+	border-radius: 10px;
+}
+
+/**footer**/
+#pageMarketDetail_footer {
+	position: fixed;
+	bottom: 0px;
+	height: 44px;
+	left: 0px;
+	right: 0px;
+	background-color: #fff;
+	border-top: 1px solid #dedede;
+}
+
+#pageMarketDetail_footer>.buy {
+	width: 90%;
+	margin: 6px auto;
+	display: block;
+	text-align: center;
+	background-color: #11cd6e;
+	color: #fff;
+	border-radius: 3px;
+	height: 32px;
+	line-height: 32px;
+	letter-spacing: 1px;
+}
+
+/**gift**/
+#pageMarketDetail_wrapper .giftMask{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+    display: none;
+    overflow: hidden;
+}
+
+#pageMarketDetail_wrapper .gift{
+    width: 260px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -115px;
+    margin-left: -130px;
+    z-index: 1001;
+    border: 1px solid #eee;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: SimHei;
+    box-shadow: rgba(180,180,180,0.6) 2px 2px 4px;
+    display: none;
+    overflow: hidden;
+}
+
+#pageMarketDetail_wrapper .gift .title{
+    padding: 8px 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    color: #272727;
+}
+
+#pageMarketDetail_wrapper .gift .detail{
+	padding: 10px;
+    font-size: 13px;
+    text-indent: 26px;
+    color: #555;
+    line-height: 16px;
+}
+
+#pageMarketDetail_wrapper .gift .btns{
+	border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+#pageMarketDetail_wrapper .gift .btns .btn1{
+    float: left;
+    width: 50%;
+    line-height: 40px;
+    margin-left: -1px;
+    border-right: 1px solid #ddd;
+    color: #08c;
+    margin-top: 3px;
+}
+
+#pageMarketDetail_wrapper .gift .btns .btn2{
+    float: right;
+    width: 50%;
+    line-height: 40px;
+    color: #111;
+    margin-top: 3px;
+}

@@ -1,0 +1,709 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	background-color: #f3f3f3;
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	overflow: hidden;
+}
+
+.pageClientLawyerLetter_wrapper{
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	overflow: auto;
+}
+
+/**
+  *���������˵�
+  *
+  **/
+#typeMenuMask {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	overflow: hidden;
+	z-index: 9999998;
+	background: rgba(0, 0, 0, 0.5);
+	display: none;
+}
+
+#typeMenu {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	height: 80px;
+	overflow: hidden;
+	transition: all 0.3s ease;
+	transform: translateY(100%);
+	-webkit-transition: all 0.3s ease;
+	-webkit-transform: translateY(100%);
+	z-index: 9999999;
+}
+
+#typeMenu li.list {
+	font-family: SimHei;
+	color: #272727;
+	text-align: center;
+	font-size: 14px;
+	padding: 12px 0px 10px 0px;
+	border-bottom: 1px solid #dedede;
+}
+
+#typeMenu li.list:nth-child(odd) {
+	background-color: #f9f9f9;
+}
+
+/**
+  *��ҳ��
+  *
+  **/
+.mainWrapper {
+	position: absolute;
+	top: 46px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	overflow: visible;
+}
+
+.mainWrapper>#scroller {
+	position: absolute;
+	left: 0px;
+	width: 100%;
+}
+
+/**��ҳ���µ�����ͼ**/
+.mainWrapper>#scroller .flow {
+	width: 95%;
+	margin:0px auto;
+}
+
+.mainWrapper>#scroller .flow ul {
+	display: table;
+	width: 100%;
+	overflow: hidden;
+}
+
+.mainWrapper>#scroller .flow ul li {
+	display: table-cell;
+	text-align: center;
+	line-height: 45px;
+	width: 25%;
+}
+
+.mainWrapper>#scroller .flow ul.flowPic li:before {
+	content: ' ';
+	background-color: #888;
+	height: 6px;
+	width: 50%;
+	display: block;
+	float: left;
+	margin-left: -20px;
+	margin-top: 21px;
+	position: relative;
+	left: 10px;
+}
+
+.mainWrapper>#scroller .flow ul.flowPic li:nth-of-type(1):before {
+	background-color: transparent !important;
+}
+
+.mainWrapper>#scroller .flow ul.flowPic li:nth-of-type(4):after {
+	background-color: transparent !important;
+}
+
+.mainWrapper>#scroller .flow ul.flowPic li:after {
+	content: ' ';
+	background-color: #888;
+	height: 6px;
+	width: 50%;
+	display: block;
+	float: right;
+	margin-right: -20px;
+	margin-top: 21px;
+	position: relative;
+	right: 9px;
+}
+
+.mainWrapper>#scroller .flow ul.flowPic span.iconfont {
+	background-color: #888;
+	color: #fff;
+	padding: 5px;
+	border-radius: 100%;
+	font-size: 14px;
+}
+
+.mainWrapper>#scroller ul.flowText {
+	margin-top: -11px;
+}
+
+.mainWrapper>#scroller ul.flowText li {
+	line-height: 26px;
+	font-size: 11px;
+	font-family: SimHei;
+	color: #888;
+}
+
+/**���̽ڵ㼤��**/
+.mainWrapper>#scroller .flow ul.flowPic li.active:before {
+	background-color: #08c;
+}
+
+.mainWrapper>#scroller .flow ul.flowPic li.active:after {
+	background-color: #08c;
+}
+
+.mainWrapper>#scroller .flow ul.flowPic li.current:after {
+	background-color: #888;
+}
+
+.mainWrapper>#scroller .flow ul.flowPic li.active .iconfont {
+	background-color: #08c;
+}
+
+.mainWrapper>#scroller .flow ul.flowText li.active {
+	color: #08c;
+}
+
+/**��������**/
+.mainWrapper>#scroller .textWrapper {
+	width: 95%;
+	margin: 0px auto;
+	box-shadow: #ccc 2px 1px 1px;
+}
+
+.mainWrapper>#scroller .textWrapper .text {
+	width: 96%;
+	margin-top: 2px;
+	display: block;
+	height: 120px;
+	padding: 2%;
+	border: 0px;
+	border-radius: 0px;
+	font-size: 15px;
+	color: #444;
+	font-family: SimHei;
+	outline: none;
+	resize: none;
+}
+
+.mainWrapper>#scroller .textWrapper .textUtil {
+	width: 100%;
+	margin: 0px auto;
+	overflow: hidden;
+	padding: 0px 0px 10px 0px;
+	background-color: #fff;
+}
+
+.mainWrapper>#scroller .textWrapper .textUtil .voiceUtil {
+	text-align: right;
+}
+
+.mainWrapper>#scroller .textWrapper .textUtil .voiceUtil .iconfont {
+	padding: 5px 12px;
+	color: #888;
+	font-size: 18px;
+}
+
+.mainWrapper>#scroller .textWrapper .textUtil span.rubbish {
+	float: left;
+	margin-left: 10px;
+	color: #aaa;
+	font-size: 24px;
+	vertical-align: middle;
+}
+
+.mainWrapper>#scroller .textWrapper .textUtil span.words {
+	float: right;
+	margin-right: 10px;
+	font-size: 12px;
+	color: #aaa;
+	padding-top: 7px;
+}
+
+.mainWrapper>#scroller .textWrapper .btns {
+	width: 100%;
+	margin: 0px auto;
+	overflow: hidden;
+	font-family: SimHei;
+}
+
+.mainWrapper>#scroller .textWrapper .btns a:nth-of-type(1) {
+	height: 35px;
+	line-height: 35px;
+	text-decoration: none;
+	background-color: #777;
+	color: #fff;
+	text-align: center;
+	font-size: 14px;
+	display: block;
+}
+
+.mainWrapper>#scroller .textWrapper .btns a:nth-of-type(1) .iconfont {
+	margin-left: 8px;
+}
+
+/**��ҳ���µ�ͼƬ�ϴ�����**/
+.mainWrapper>#scroller .imgList {
+	width: 95%;
+	margin: 15px auto 0px auto;
+	overflow: hidden;
+}
+
+.mainWrapper>#scroller .imgList .moreImg {
+	float: left;
+	height: 52px;
+	margin-right: -7px;
+}
+
+.mainWrapper>#scroller .imgList .moreImg img.imgThumb {
+	width: 43px;
+	height: 43px;
+	border-radius: 3px;
+	margin-top: 8px;
+}
+
+.mainWrapper>#scroller .imgList .addImg {
+	padding: 13px;
+	color: #777;
+	vertical-align: middle;
+	background-color: #fff;
+	float: left;
+	margin-top: 8px;
+}
+
+.mainWrapper>#scroller .imgList .moreImg .close {
+	position: relative;
+	color: #fff;
+	background-color: #b1191a;
+	border-radius: 100%;
+	font-size: 17px;
+	font-weight: bold;
+	left: -18px;
+	top: -34px;
+	z-index: 10;
+}
+
+.mainWrapper>#scroller .imgList .addImgText {
+	font-size: 12px;
+	color: #777;
+	float: left;
+	margin-top: 22px;
+	margin-left: 8px;
+}
+
+/**��ҳ���µ��ʼķ�ʽ**/
+.mainWrapper>#scroller .shipptype {
+	width: 95%;
+	margin: 10px auto 0px auto;
+	border: 1px solid #bbb;
+	border-radius: 4px;
+}
+
+.mainWrapper>#scroller .shipptype #title {
+	font-size: 12px;
+	color: #999;
+	display: block;
+	width: 62px;
+	margin: 0px auto;
+	position: relative;
+	top: -6px;
+	background-color: #f3f3f3;
+	text-align: center;
+}
+
+.mainWrapper>#scroller .shipptype #select {
+	text-align: center;
+	padding: 0px 5px 10px 5px;
+}
+
+.mainWrapper>#scroller .shipptype #select .sendToMe, .mainWrapper>#scroller .shipptype #select .sendToHim
+	{
+	font-family: SimHei;
+	font-size: 14px;
+	color: #555;
+}
+
+.mainWrapper>#scroller .shipptype #select .sendToMe .iconfont,
+	.mainWrapper>#scroller .shipptype #select .sendToHim .iconfont {
+	padding-right: 5px;
+}
+
+.mainWrapper>#scroller .shipptype #select .active, .mainWrapper>#scroller .shipptype #select .active .iconfont
+	{
+	color: #08c;
+	font-weight: bold;
+}
+
+.mainWrapper>#scroller .shipptype #select .sendToMe {
+	padding-right: 25px;
+	border-right: 1px solid #aaa;
+}
+
+.mainWrapper>#scroller .shipptype #select .sendToHim {
+	padding-left: 25px;
+}
+
+/**��ҳ���µ��ύ��ť**/
+.mainWrapper>#scroller .next {
+	width: 80%;
+	margin: 20px auto 0px auto;
+	background-color: #aaa;
+	color: #fff;
+	text-align: center;
+	height: 32px;
+	line-height: 32px;
+	border-radius: 4px;
+	font-family: SimHei;
+	font-size: 15px;
+}
+
+/**��ҳ���µı�ע��Ϣ**/
+.mainWrapper>#scroller .remark {
+	width: 95%;
+	margin: 0px auto;
+	padding: 10px 5px 3px 0px;
+	color: #888;
+	text-align: right;
+	font-family: SimHei;
+	font-size: 12px;
+}
+
+.mainWrapper>#scroller .remark .icon {
+	border: 1px solid #777;
+	border-radius: 100%;
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	text-align: center;
+	line-height: 12px;
+	margin-right: 2px;
+}
+
+.mainWrapper>#scroller .remark .remarkDetail {
+	text-align: left;
+	line-height: 18px;
+	width: 85%;
+	margin: 0px auto;
+	padding-top: 5px;
+	padding-left: 25px;
+}
+
+/**��ҳ���µ���������**/
+.mainWrapper>#scroller .free {
+	font-size: 12px;
+	color: #08c;
+	width: 90%;
+	margin: 50px auto 30px auto;
+	text-align: right;
+	clear: both;
+}
+
+.mainWrapper>#scroller .free .freeText {
+	color: #888;
+}
+
+/** 
+  *�ֻ���֤�������ʼ���Ϣ 
+  *
+  **/
+.phoneCheck {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 999;
+	padding: 0px 0px 20px 0px;
+	text-align: center;
+	-webkit-transition: all 0.3s ease;
+	-webkit-transform: translateY(-100%);
+	overflow: hidden;
+	bottom:0px;
+}
+
+.phoneCheck>#scroller {
+	position: absolute;
+	left:0px;
+	width:100%;	
+}
+
+.phoneCheck .close {
+	display: block;
+	float: right;
+	margin-right: 10px;
+	color: #fff;
+	font-size: 17px;
+	padding: 20px 15px 15px 20px;
+}
+
+.phoneCheck .smsLogo .iconfont {
+	color: #fff;
+	font-size: 48px;
+	position: relative;
+	left: 10px;
+}
+
+.phoneCheck .phoneInputArea {
+	display: table;
+	width: 95%;
+	margin: 0px auto;
+	color: #fff;
+	font-family: SimHei;
+	font-size: 13px;
+	border: 1px solid #aaa;
+	border-radius: 6px;
+}
+
+.phoneCheck .row {
+	display: table-row;
+}
+
+.phoneCheck .cell {
+	display: table-cell;
+	line-height: 36px;
+	padding: 3px 4px 3px 5px;
+}
+
+.phoneCheck .cell.tl {
+	text-align: left;
+	width: 70px;
+	font-size: 14px;
+	padding-left: 5px;
+}
+
+.phoneCheck .cell.tr {
+	text-align: left;
+	padding-right: 10px;
+	font-size: 13px;
+	color: #bbb;
+}
+
+.phoneCheck .cell.tr .red {
+	color: #F35252;
+	padding-right: 2px;
+}
+
+.phoneCheck .cell.tr .arrow {
+	float: right;
+	font-size: 13px;
+}
+
+.phoneCheck .cell.tr .newValue {
+	color: #fff;
+}
+
+.phoneCheck #codeInput, .phoneCheck #senderPhone {
+	width: 60%;
+	padding: 2px 2px 2px 0px;
+	font-size: 14px;
+	background-color: transparent;
+	border: 0px;
+	color: #fff;
+	font-family: SimHei;
+}
+
+.phoneCheck #viryCode, .phoneCheck #senderCode {
+	width: 100%;
+	padding: 2px 2px 2px 0px;
+	background-color: transparent;
+	border: 0px;
+	color: #fff;
+	font-size: 14px;
+	font-family: SimHei;
+}
+
+.phoneCheck #getCode {
+	font-size: 12px;
+	background-color: #08c;
+	padding: 6px 5px;
+	border-radius: 3px;
+	height: 17px;
+	line-height: 17px;
+	width: 33%;
+	float: right;
+	text-align: center;
+	margin-top: 3px;
+	color: #fff;
+}
+
+.phoneCheck .row.borderB .cell {
+	border-bottom: 1px solid #bbb;
+}
+
+.phoneCheck .subCheck {
+	color: #08c;
+	font-family: SimHei;
+	margin: 20px;
+	padding: 10px;
+}
+
+/**�ֻ���֤ҳ���µ��ʼĸ�����**/
+.phoneCheck .infoWrapper {
+	width: 96%;
+	margin: 20px auto;
+	color: #eee;
+	font-size: 12px;
+	font-family: SimHei;
+	overflow: hidden;
+}
+
+.phoneCheck .infoWrapper .senderWrapper, .infoWrapper  .recWrapper {
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+
+.phoneCheck .infoWrapper .senderWrapper>span, .infoWrapper .recWrapper>span
+	{
+	padding-bottom: 16px;
+	display: block;
+	border-bottom: 1px solid #555;
+	width: 100%;
+	margin: 0px auto 0px auto;
+}
+
+.phoneCheck .infoWrapper .senderWrapper table, .infoWrapper .recWrapper table
+	{
+	width: 100%;
+}
+
+.phoneCheck .infoWrapper .senderWrapper table {
+	border-right: 1px solid #666;
+}
+
+.phoneCheck .infoWrapper .senderWrapper td, .infoWrapper .recWrapper td
+	{
+	line-height: 36px;
+	border-bottom: 1px solid #555;
+}
+
+.phoneCheck .infoWrapper .senderWrapper td.tl, .infoWrapper .recWrapper td.tl
+	{
+	text-align: left;
+	padding-left: 4px;
+}
+
+.phoneCheck .infoWrapper .senderWrapper td.tr, .infoWrapper .recWrapper td.tr
+	{
+	text-align: right;
+	padding-right: 2px;
+}
+
+.phoneCheck .infoWrapper .senderWrapper td.tr .iconfont, .infoWrapper .recWrapper td.tr .iconfont
+	{
+	font-size: 12px;
+}
+
+.phoneCheck .infoWrapper .senderWrapper #copyPhone {
+	color: #08c;
+}
+
+/**
+  *Ԥ������
+  *
+  **/
+.prevMask {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	font-size: 14px;
+	background: rgba(0, 0, 0, 0.6);
+	padding: 20px 30px;
+	color: #eee;
+	font-family: SimHei;
+}
+
+.prevMask .prevMaskInfo a {
+	color: #08c;
+	padding: 0px 2px;
+}
+
+.prevMask .prevMaskClose {
+	position: absolute;
+	top: 10px;
+	right: 0px;
+	padding: 9px 9px 5px 2px;
+	font-size: 15px;
+}
+
+/**
+  *ͨ�õ���������
+  *
+  **/
+#newInput {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow: hidden;
+    z-index: 9999;
+    background-color: #eee;
+    font-family: SimHei;
+    transition: all 0.3s ease;
+    transform: translateX(100%);
+    -webkit-transition: all 0.3s ease;
+    -webkit-transform: translateX(100%);
+}
+
+#newInput .title {
+	line-height: 40px;
+	background-color: #eee;
+	overflow: hidden;
+	border-bottom: 1px solid #ccc;
+	color: #666;
+}
+
+#newInput .title span:nth-of-type(1) {
+	font-family: SimHei;
+	padding-left: 20px;
+}
+
+#newInput .title span:nth-of-type(2) {
+	color: #08c;
+	float: right;
+	font-size: 15px;
+	padding-right: 20px;
+}
+
+#newInput textarea {
+	border-radius: 0px;
+	border: 0px;
+	background-color: #fff;
+	color: #555;
+	width: 96%;
+	clear: both;
+	padding: 3% 2%;
+	height: 150px;
+	font-size: 16px;
+	border-bottom: 1px solid #eee;
+}
+
+#newInput span.subNewInput {
+	font-family: SimHei;
+	font-weight: bold;
+	color: #08c;
+	display: block;
+	margin: 20px auto 10px auto;
+	width: 100px;
+	text-align: center;
+	line-height: 25px;
+	font-size: 20px;
+	letter-spacing: 2px;
+}

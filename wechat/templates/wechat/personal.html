@@ -1,0 +1,147 @@
+<!-- 个人中心首页 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>个人主页</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/show.css">
+</head>
+    <body>
+        <div id="pageClientCenter_wrapper">
+            <div class="back">
+                <img class="face" src="/static/images/0.jpeg"/>
+                <div class="name">&nbsp;</div>
+                <div class="orderPrew">
+                    <div>
+                        <span id="orderPrewProcessValue">0</span>
+                        <span>进行中订单</span>
+                    </div>
+                    <div>
+                        <span id="orderPrewOverValue">0</span>
+                        <span>已完成订单</span>
+                    </div>
+                    <div>
+                        <span id="orderPrewAllValue">0</span>
+                        <span>全部订单</span>
+                    </div>
+                </div>
+            </div>
+            <div class="list border" style="background-color: #f9f9f9;">
+                <span class="iconfont icon" style="background-color: #09d">&#xe6d4;</span>
+                <div class="text">
+                    <span>个人信息</span>
+                    <span>补全企业信息送法律服务包</span>
+                </div>
+                <span class="iconfont nav">&#xe673;</span>
+            </div>
+            <div class="list border" id="clientCenterList_myOrder">
+                <span class="iconfont icon" style="background-color: #ee5389">&#xe6ab;</span>
+                <div class="text">
+                    <span>我的订单</span>
+                    <span>您可以看到使用过哪些法律服务</span>
+                </div>
+                <span class="iconfont nav">&#xe673;</span>
+            </div>
+            <div class="list border" style="background-color: #f9f9f9;">
+                <span class="iconfont icon" style="background-color: #7189e9">&#xe6ad;</span>
+                <div class="text">
+                    <span>购买历史</span>
+                    <span>您可以看到购买过哪些法律产品</span>
+                </div>
+                <span class="iconfont nav">&#xe673;</span>
+            </div>
+            <div class="list border">
+                <span class="iconfont icon" style="background-color: #08c">&#xe644;</span>
+                <div class="text">
+                    <span>邀请好友</span>
+                    <span>您可以邀请好友获得积分返现</span>
+                </div>
+                <span class="iconfont nav">&#xe673;</span>
+            </div>
+            <div class="list border" style="background-color: #f9f9f9;">
+                <span class="iconfont icon" style="background-color: #39D473">&#xe62c;</span>
+                <div class="text">
+                    <span>积分商城</span>
+                    <span>积分可以用来换东西哦</span>
+                </div>
+                <span class="iconfont nav">&#xe673;</span>
+            </div>
+            <div class="list border">
+                <span class="iconfont icon" style="background-color: #EFBF40">&#xe63b;</span>
+                <div class="text">
+                    <span>积分历史</span>
+                    <span>看看我的积分是怎么来的</span>
+                </div>
+                <span class="iconfont nav">&#xe673;</span>
+            </div>
+            <!-- <div class="list border" style="background-color: #f9f9f9;">
+                <span class="iconfont icon" style="background-color: #09d">&#xe6f5;</span>
+                <div class="text">
+                    <span>帐号关联</span>
+                    <span>电脑端购买记录同步至微信端</span>
+                </div>
+                <span class="iconfont nav">&#xe673;</span>
+            </div> -->
+            <div class="footer">
+                <span>法律因科技更美好</span>
+                <span>The law is better because of technology</span>
+            </div>
+        </div>
+        <!-- 微信服务号的footer，展示在一级菜单页面中  -->
+
+        <style type="text/css"> 
+            #pageFooter_wrapper{
+                position: fixed;
+                bottom: 0px;
+                left: 0px;
+                right: 0px;
+                background: rgba(255,255,255,0.9);
+                border-top: 1px solid #ededed;
+                z-index: 2;
+            }
+            #pageFooter_wrapper>.item{
+                width: 33.33333%;
+                float: left;
+                text-align: center;
+            }
+            #pageFooter_wrapper>.item>.iconfont{
+                font-size: 19px;
+                display: inline-block;
+                padding-top: 3px;
+                color: #444;
+            }
+            #pageFooter_wrapper>.item>.label{
+                display: block;
+                padding: 5px 0px;
+                font-size: 12px;
+                font-family: SimHei;
+                color: #777;
+            }
+        </style>
+        <div id="pageFooter_wrapper">
+            <div class="item">
+                <span class="iconfont" style="color: #4AD87F;">&#xe676;</span>
+                <span class="label">法律服务</span>
+            </div>
+            <div class="item"  onclick="javascript:window.location.href='index.html'">
+                <span class="iconfont" style="color: #3E9FD0;">&#xe66a;</span> 
+                <span class="label">法律商城</span>
+            </div>
+            <div class="item">
+                <span class="iconfont" style="color: #D69634;">&#xe60f;</span>
+                <span class="label">个人中心</span>
+            </div>
+        </div>
+    </body>
+    </html>
+

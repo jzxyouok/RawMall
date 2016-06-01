@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>法律商城</title>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/flexslider.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/zepto.alert.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/mask.css">
+    <script>
+
+    </script>
+</head>
+<body onload="loaded()">
+
+<div id="pageHeader_wrapper">
+    <div class="header">
+        <img class="headerFace" src="/static/images/0.jpeg"/>
+
+        <div class="itemsSelectScrollMaskWrapper">
+            <div class="itemsSelect" id="wrapper">
+                <div class="scroller" id="scroller">
+                    <ul>
+                        <li class="items_quickAsk">快速咨询</li>
+                        <li class="items_phoneAsk" onclick="window.location.href='ask_phone.html'">电话咨询</li>
+                        <li class="items_quickContract">精品合同</li>
+                        <li class="items_lawyerLetter">律师函</li>
+                        <li class="items_advisorVisit">律师上门</li>
+                        <li class="items_doingService">进行中订单</li>
+                        <li class="items_alreadyService">已完成订单</li>
+                        <li class="items_noService">未评价订单</li>
+                        <li class="items_allService">全部订单</li>
+                        <li class="items_personalInfo">个人信息</li>
+                        <li class="items_lawyerBuy">购买记录</li>
+                        <li class="items_personalCenter">个人中心</li>
+                        <li class="items_suggestion">意见反馈</li>
+                        <li class="items_contactUs">联系我们</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="itemsSelectAll">
+            全部功能
+        </div>
+        <div class="itemsAll">
+            <span class="icon iconfont">&#xe6b6;</span>
+        </div>
+    </div>
+    <div class="itemsList">
+        <div id="scroller"
+             style="transition: 0ms cubic-bezier(0.1, 0.57, 0.1, 1); -webkit-transition: 0ms cubic-bezier(0.1, 0.57, 0.1, 1); transform: translate(0px, 0px) translateZ(0px);">
+            <div class="list animated items_quickAsk">
+                <span class="iconfont" style="color:#9d55b8; margin-top:-27px">&#xe602;</span>
+                <span class="label">快速咨询</span>
+            </div>
+            <!-- <div class="list animated items_contractExam">
+                <span class="iconfont" style="color:#56abe4;margin-top: -31px;">&#xe603;</span>
+                <span class="label">合同审查</span>
+            </div> -->
+            <div class="list animated items_phoneAsk" onclick="javascript:window.location.href='ask_phone.html'">
+                <span class="iconfont" style="color:#11cd6e;margin-top:-32px">&#xe600;</span>
+                <span class="label">电话咨询</span>
+            </div>
+            <div class="list animated items_quickContract">
+                <span class="iconfont" style="color:#56abe4">&#xe705;</span>
+                <span class="label">精品合同</span>
+            </div>
+            <div class="list animated items_lawyerLetter">
+                <span class="iconfont" style="color:#ea8010;margin-top:-33px">&#xe6c4;</span>
+                <span class="label">律师函</span>
+            </div>
+            <!-- <div class="list animated items_lawyerVisit_b">
+                <span class="iconfont" style="color:#eb4f38;font-size: 31px;">&#xe601;</span>
+                <span class="label">预约上门</span>
+            </div> -->
+            <!-- <div class="list animated items_lawyerVisit_e">
+                <span class="iconfont" style="color:#eb4f38">&#xe604;</span>
+                <span class="label">紧急上门</span>
+            </div> -->
+            <div class="list animated items_advisorVisit">
+                <span class="iconfont" style="color:#11cd6e">&#xe614;</span>
+                <span class="label">律师上门</span>
+            </div>
+            <div class="list animated items_specialService">
+                <span class="iconfont" style="color:#eb4f38;margin-top:-31px;font-size:35px">&#xe619;</span>
+                <span class="label">进行中订单</span>
+            </div>
+            <div class="list animated items_expertAsk">
+                <span class="iconfont" style="color:#56abe4;">&#xe617;</span>
+                <span class="label">已完成订单</span>
+            </div>
+            <div class="list animated items_lawyerSuggest">
+                <span class="iconfont" style="color:#9d55b8;">&#xe618;</span>
+                <span class="label">未评价订单</span>
+            </div>
+            <div class="list animated items_officialLetter">
+                <span class="iconfont" style="color:#ea8010;">&#xe61a;</span>
+                <span class="label">全部订单</span>
+            </div>
+            <!-- <div class="list animated items_companyTrain">
+                <span class="iconfont" style="color:#eb4f38">&#xe624;</span>
+                <span class="label">企业培训</span>
+            </div> -->
+        </div>
+    </div>
+    <div class="itemsListMask">
+    </div>
+    <div class="clientCenterMask"></div>
+    <div class="clientCenter" id="menu">
+        <div id="scroller">
+            <div class="back">
+                <img class="clientCenterFace" src="/static/images/0.jpeg"/>
+                <div class="clientCenterName">完善个人信息</div>
+                <span class="iconfont clientCenterArr">&#xe6b6;</span>
+                <div class="orderPrew">
+                    <div>
+                        <span id="orderPrewProcessValue">0</span>
+                        <span>进行中订单</span>
+                    </div>
+                    <div>
+                        <span id="orderPrewOverValue">0</span>
+                        <span>已完成订单</span>
+                    </div>
+                    <div>
+                        <span id="orderPrewAllValue">0</span>
+                        <span>全部订单</span>
+                    </div>
+                </div>
+            </div>
+            <div class="searchField">
+                <span class="iconfont">&#xe603;</span>
+                <span>搜索法律疑问</span>
+            </div>
+            <div class="clientCenterList clientCenterListBorder" style="background-color: #f9f9f9;">
+                <span class="iconfont clientCenterListIcon">&#xe627;</span>
+                <div class="clientCenterListText">
+                    <span>个人信息</span>
+                    <span>补全个人信息送法律服务包</span>
+                </div>
+                <span class="iconfont clientCenterListNav">&#xe673;</span>
+            </div>
+            <div id="clientCenterList_myOrder" class="clientCenterList clientCenterListBorder">
+                <span style="font-size: 24px;" class="iconfont clientCenterListIcon">&#xe628;</span>
+                <div class="clientCenterListText">
+                    <span>我的订单</span>
+                    <span>您的历史数据</span>
+                </div>
+                <span class="iconfont clientCenterListNav">&#xe673;</span>
+            </div>
+            <div class="clientCenterList clientCenterListBorder" style="background-color: #f9f9f9;">
+                <span class="iconfont clientCenterListIcon">&#xe626;</span>
+                <div class="clientCenterListText">
+                    <span>购买历史</span>
+                    <span>看看购买过的法律产品</span>
+                </div>
+                <span class="iconfont clientCenterListNav">&#xe673;</span>
+            </div>
+            <!-- <div class="clientCenterList clientCenterListBorder"> 
+                <span class="iconfont clientCenterListIcon">&#xe644;</span>
+                <div class="clientCenterListText">
+                    <span>邀请好友</span>
+                    <span>您可以邀请好友获得积分返现</span>
+                </div>
+                <span class="iconfont clientCenterListNav">&#xe673;</span>
+            </div> -->
+            <div class="clientCenterList clientCenterListBorder" style="background-color: #f9f9f9;">
+                <span class="iconfont clientCenterListIcon">&#xe62c;</span>
+                <div class="clientCenterListText">
+                    <span>积分商城</span>
+                    <span>积分可以用来换东西哦</span>
+                </div>
+                <span class="iconfont clientCenterListNav">&#xe673;</span>
+            </div>
+            <div class="clientCenterList clientCenterListBorder">
+                <span class="iconfont clientCenterListIcon">&#xe63b;</span>
+                <div class="clientCenterListText">
+                    <span>积分历史</span>
+                    <span>看看我的积分是怎么来的</span>
+                </div>
+                <span class="iconfont clientCenterListNav">&#xe673;</span>
+            </div>
+            <!-- <div class="clientCenterList" style="background-color: #f9f9f9;">
+                <span class="iconfont clientCenterListIcon">&#xe6f5;</span>
+                <div class="clientCenterListText">
+                    <span>帐号关联</span>
+                    <span>电脑端购买记录同步至微信端</span>
+                </div>
+                <span class="iconfont clientCenterListNav">&#xe673;</span>
+            </div> -->
+            <div class="clientCenterMarket">
+                拥有专属法律顾问，不想试试吗?
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="pageMarketIndex_wrapper">
+    <div id="scroller">
+        <div class="flexslider">
+            <div class="iconfont close"
+                 onclick="javascript:$('#pageMarketIndex_wrapper>#scroller div.flexslider').hide();pageMarketIndex_wrapperScroller.refresh();">
+                &#xe690;</div>
+            <ul class="slides">
+                <li><img src="/static/images/market_free.jpg"/></li>
+                <li><img src="/static/images/market_diy.jpg"/></li>
+            </ul>
+        </div>
+        <div class="topBanner">
+            <div class="part">
+                <div class="iconfont">&#xe629;</div>
+                <div class="label">法律顾问</div>
+            </div>
+            <div class="part"
+                 onclick="javascript:pageMarketIndex_wrapperScroller.scrollToElement($('#pageMarketIndex_wrapper>#scroller div.list.tj').get(0))">
+                <div class="iconfont">&#xe636;</div>
+                <div class="label">精选单品</div>
+            </div>
+            <div class="part"
+                 onclick="javascript:pageMarketIndex_wrapperScroller.scrollToElement($('#pageMarketIndex_wrapper>#scroller div.list.special').get(0))">
+                <div class="iconfont">&#xe62d;</div>
+                <div class="label">企业定制</div>
+            </div>
+            <div class="part">
+                <div class="iconfont">&#xe61e;</div>
+                <div class="label">专家产品</div>
+            </div>
+        </div>
+        <!-- <div class="blockGroup">
+            <div class="part">
+                <div class="iconfont">&#xe629;</div>
+                <div class="label">
+                    注册信息<br/>获得免费法律顾问
+                </div>
+            </div>
+            <div class="part">
+                <div class="iconfont">&#xe62c;</div>
+                <div class="label">
+                    法律顾问<br/>了解3款匠心产品
+                </div>
+            </div>
+        </div> -->
+        <div class="list tj">
+            <div class="title">{{ recommanded_product_title }}</div>
+            {#            {% title = recommanded_products[0].get_type_display() %}#}
+{#            {{ recommanded_products[0].get_type_display}}#}
+            {% for product in recommanded_products %}
+
+                <div class="cell" onclick="javascript:window.location.href='{%  url 'product_detail' product.type product.id %}'">
+                    <div class="price">￥{{ product.price }}/年</div>
+                    <div class="iconfont" style="color:#11cd6e">&#{{ product.iconfont }}</div>
+                    <div class="label">{{ product.name }}</div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="list special">
+            <div class="title">{{ expert_products_title }}</div>
+            {% for product in expert_products %}
+            <div class="cell" onclick="javascript:window.location.href='{%  url 'product_detail' product.type product.id %}'">
+                <div class="price">￥{{ product.price }}/项</div>
+                <div class="iconfont" style="color:#11cd6e">&#{{ product.iconfont }}</div>
+                <div class="label">{{ product.name }}</div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="diyAd">
+            <div class="title">自由组合类法律顾问</div>
+            <div class="partLeft">
+                <div class="iconfont">&#xe633;</div>
+                <div class="text">
+                    <span>自己动手搭配</span>
+                    <span>才能设计出独一无二的法律顾问</span>
+                </div>
+            </div>
+            <div class="partRight">
+                <span>马上去DIY</span>
+            </div>
+        </div>
+        <!--  <div class="invitation">
+             <img src="/static/images/hi.png" class="left"/>
+             <div class="right">
+                 <span>邀请好友</span>
+                 <span>送朋友免费法律顾问</span>
+             </div>
+         </div> -->
+        <div style="height:20px"></div>
+    </div>
+</div>
+
+<!-- 展示在一级菜单页面中  -->
+
+<style type="text/css">
+    #pageFooter_wrapper {
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background: rgba(255, 255, 255, 0.9);
+        border-top: 1px solid #ededed;
+        z-index: 2;
+    }
+
+    #pageFooter_wrapper > .item {
+        width: 33.33333%;
+        float: left;
+        text-align: center;
+    }
+
+    #pageFooter_wrapper > .item > .iconfont {
+        font-size: 19px;
+        display: inline-block;
+        padding-top: 3px;
+        color: #444;
+    }
+
+    #pageFooter_wrapper > .item > .label {
+        display: block;
+        padding: 5px 0px;
+        font-size: 12px;
+        font-family: SimHei;
+        color: #777;
+    }
+</style>
+<div id="pageFooter_wrapper">
+    <div class="item">
+        <span class="iconfont" style="color: #4AD87F;">&#xe676;</span>
+        <span class="label">法律服务</span>
+    </div>
+    <div class="item" onclick="javascript:window.location.href=''">
+        <span class="iconfont" style="color: #3E9FD0;">&#xe66a;</span>
+        <span class="label">法律商城</span>
+    </div>
+    <div class="item" onclick="javascript:window.location.href='{% url 'personal' %}'">
+        <span class="iconfont" style="color: #D69634;">&#xe60f;</span>
+        <span class="label">个人中心</span>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/index.js"></script>
+<script type="text/javascript" src="/static/js/iscroll.js"></script>
+<script type="text/javascript" src="/static/js/jquery.flexslider-min.js"></script>
+
+
+</body>
+</html>
+

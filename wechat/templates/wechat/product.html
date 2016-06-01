@@ -1,0 +1,144 @@
+<!-- 商城推荐包详情页面 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>商品详情</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/detail.css">
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+    <script>
+        /*
+         * 注意：
+         * 1. 所有的JS接口只能在公众号绑定的域名下调用，公众号开发者需要先登录微信公众平台进入“公众号设置”的“功能设置”里填写“JS接口安全域名”。
+         * 2. 如果发现在 Android 不能分享自定义内容，请到官网下载最新的包覆盖安装，Android 自定义分享接口需升级至 6.0.2.58 版本及以上。
+         * 3. 常见问题及完整 JS-SDK 文档地址：http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html
+         *
+         * 开发中遇到问题详见文档“附录5-常见错误及解决办法”解决，如仍未能解决可通过以下渠道反馈：
+         * 邮箱地址：weixin-open@qq.com
+         * 邮件主题：【微信JS-SDK反馈】具体问题
+         * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
+         */
+        wx.config({
+            debug: true,
+            appId: {{ appId|safe }},
+            timestamp: {{ timestamp|safe }},
+            nonceStr: {{ nonceStr|safe }},
+            signature: {{ signature|safe }},
+            jsApiList: [
+                'checkJsApi',
+                'onMenuShareTimeline',
+                'onMenuShareAppMessage',
+                'onMenuShareQQ',
+                'onMenuShareWeibo',
+                'onMenuShareQZone',
+                'hideMenuItems',
+                'showMenuItems',
+                'hideAllNonBaseMenuItem',
+                'showAllNonBaseMenuItem',
+                'translateVoice',
+                'startRecord',
+                'stopRecord',
+                'onVoiceRecordEnd',
+                'playVoice',
+                'onVoicePlayEnd',
+                'pauseVoice',
+                'stopVoice',
+                'uploadVoice',
+                'downloadVoice',
+                'chooseImage',
+                'previewImage',
+                'uploadImage',
+                'downloadImage',
+                'getNetworkType',
+                'openLocation',
+                'getLocation',
+                'hideOptionMenu',
+                'showOptionMenu',
+                'closeWindow',
+                'scanQRCode',
+                'chooseWXPay',
+                'openProductSpecificView',
+                'addCard',
+                'chooseCard',
+                'openCard'
+            ]
+        });
+
+    </script>
+    <script type="text/javascript" src="/static/js/zepto.min.js"></script>
+    <script type="text/javascript" src="/static/js/pay.js"></script>
+</head>
+<body>
+<div id="pageMarketDetail_wrapper">
+    <div id="scroller">
+        <div class="title">
+            <img class="fm" src="/static/images/tj_tiyan.jpg">
+            <div class="name">{{ product.introduction }}<br>{{ product.customer }}
+            </div>
+            <div class="price">￥{{ product.price }}
+                {% if product.type == 1 %}
+                    /年
+                {% elif product.type == 2 %}
+                    /项
+                {% endif %}
+            </div>
+            <!-- <div class="info">
+              <span class="iconfont">&#xe644;</span>
+              <span class="url">邀请好友，送朋友免费法律顾问</span>
+            </div> -->
+        </div>
+        <div class="detail">
+            <div class="title">
+                <div class="iconfont"><!--图标-->&#{{ product.iconfont }}</div>
+                <div class="text">产品详介</div>
+            </div>
+            {% for pd in product.productdetail_set.all %}
+                <div class="list">
+                    <div class="iconfont">&#{{ pd.iconfont }}</div>
+                    <div class="group">
+                        <span class="name">{{ pd.item }}</span>
+                        <pre class="desc">{{ pd.desc }}</pre>
+                    </div>
+                </div>
+            {% endfor %}
+
+            <div class="call">
+                <span>联系客服</span>
+            </div>
+        </div>
+    </div>
+    <div class="giftMask"></div>
+    <div class="gift">
+        <div class="title">完善企业信息</div>
+        <div class="detail">
+            现在完善企业信息，立即送全年快速咨询、全年合同审查及一次顾问上门服务，还不快试试？
+        </div>
+        <div class="btns">
+            <span class="btn1">立即完善</span>
+            <span class="btn2">以后再说</span>
+        </div>
+    </div>
+</div>
+
+<div id="pageMarketDetail_footer">
+    <span class="buy" id="chooseWXPay">立即购买ba</span>
+</div>
+
+<!--微信JS-SDK二次封装-->
+
+<link rel="stylesheet" href="/static/css/zepto.alert.css">
+
+</body>
+</html>
+

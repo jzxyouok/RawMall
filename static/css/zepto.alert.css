@@ -1,0 +1,182 @@
+.rDialog {
+    position: fixed;
+    _position: absolute;
+}
+.rDialog-wrap {
+    position: relative;
+    background: #555;
+    opacity: 1;
+    background-clip: padding-box;
+    border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	box-shadow: 1px 1px 1px #444;
+	padding: 1em 1em;
+}
+
+@-webkit-keyframes btnRotate {
+    0% {
+        -webkit-transform: rotateZ(0deg);
+    }
+    100% {
+        -webkit-transform: rotateZ(360deg);
+    }
+}
+
+@-webkit-keyframes record {
+    0% {
+        -webkit-transform: rotateY(0deg);
+    }
+    100% {
+        -webkit-transform: rotateY(360deg);
+    }
+}
+
+
+.rDialog-header-load {
+	text-align: center;
+	background: url("../../img/logo.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: 100%;
+	width: 50px;
+	height: 53px;
+	margin: auto;
+	-webkit-animation:btnRotate 2s linear infinite;
+}
+
+/*.rDialog-header-logo {
+	text-align: center;
+	background: url("../../img/logo.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: 100%;
+	width: 50px;
+	height: 53px;
+	margin: auto;
+}
+
+
+.rDialog-header-record {
+	text-align: center;
+	background: url("../../img/record.png?v=1");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: 100px 100px;
+	width: 100px;
+	height: 103px;
+	margin: auto;
+	-webkit-animation:record 3s linear infinite;
+}
+
+.rDialog-header-vtRecord {
+	text-align: center;
+	background: url("../../img/vt_voiceRecord.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: 100% 100%;
+	width: 70px;
+	height: 60px;
+	margin: auto;
+	-webkit-animation:vtRecord 2s linear infinite;
+}*/
+
+@-webkit-keyframes vtRecord {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.rDialog-header-vtPlay {
+	text-align: center;
+	background: url("../../img/vt_voicePlay.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: 100% 100%;
+	width: 70px;
+	height: 60px;
+	margin: auto;
+	-webkit-animation:vtRecord 2s linear infinite;
+}
+
+/*.rDialog-header-qrcode {
+	text-align: center;
+	background: url("../../img/qrcode.png");
+	background-color:#fff;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: 100%;
+	width: 200px;
+	height: 200px;
+	margin: auto;
+}*/
+
+.rDialog-header-alert,.rDialog-header-ok {
+	text-align: center;
+	background: url("images/alert-icons.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 50px;
+	height: 53px;
+	margin: auto;
+}
+.rDialog-header-alert{
+	background-position: 0 -53px;
+}
+.rDialog-header-ok {
+	background-position: 0 0;
+}
+.rDialog-content {
+    padding: 1em 1em;
+    font-size: 0.8em;
+    color: #FFF;
+    overflow: hidden;
+    text-align: center;
+}
+.rDialog-footer {
+    padding-left: 15px;
+    text-align: center;
+}
+.rDialog-footer a {
+    display: inline-block;
+    margin: 0 15px 15px 0;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 30px;
+    font-size: 0.8em;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+.rDialog-footer a: link, .rDialog-footer a: visited, .rDialog-footer a: hover {
+    color: #fff;
+    text-decoration: none;
+}
+.rDialog-ok,.rDialog-ok:hover {
+    background: #4fc847;
+    color: #fff;
+    text-decoration: none;
+}
+.rDialog-cancel,.rDialog-cancel:hover  {
+    background: #E85859;
+    color: #fff;
+    text-decoration: none;
+}
+.rDialog-mask {
+    position: fixed;
+    _position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    filter: alpha(opacity=30);
+    opacity: .3;
+}

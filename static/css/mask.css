@@ -1,0 +1,34 @@
+.zjbWxMask>.spinner {
+    position: fixed;
+    text-align: center;
+    font-size: 13px;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 19px;
+    font-family: SimHei;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    margin-top: -30px;
+    margin-left: -45px;
+}
+
+.zjbWxMask>.spinner>img {
+	width: 14px;
+	height: 14px;
+	margin-left: 3px;
+	position: relative;
+	top: 2px;
+}
+
+.zjbWxMask {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(240, 240, 240, 0);
+    z-index: 99999;
+    text-align: center;
+}
